@@ -1,5 +1,14 @@
 # Ejercicio nifi_elk kibana 311
 
+Usando nifi+ELK hay que presentar una solución que muestre sobre un mapa la disposición de delitos presentes en esta api:
+
+https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9
+
+Entregables:
+	Enlace a código Github
+	Captura de pantalla de vuestra interfaz Kibana
+
+
 ## API
 https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9
 
@@ -7,15 +16,10 @@ https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-
 	https://data.cityofnewyork.us/resource/erm2-nwe9.json
 
 ## NIFI
-http://localhost:8080/nifi/?processGroupId=root&componentIds=de7686ce-0176-1000-96a6-58a47d1a4b95
+http://localhost:8080/nifi/?processGroupId=root&componentIds=e6258f27-0176-1000-857a-fcd85cd1a73a
 
 ## KIBANA
-http://localhost:5601
 http://localhost:5601/app/kibana#/dev_tools/console?_g=()
-
-## ELASTIC SEARCH
-
-## CODE BEAUTY
 
 
 
