@@ -22,16 +22,16 @@ http://localhost:5601/app/kibana#/dev_tools/console?_g=()
 
 
 
-# 1. Levantar contenedores en DOCKER que permitan acceder a las distintas aplicaciones. Agrego al docker de Roberto, los contenedores de NIFI de la clase de Esteban. 
+### 1. Levantar contenedores en DOCKER que permitan acceder a las distintas aplicaciones. Agrego al docker de Roberto, los contenedores de NIFI de la clase de Esteban. 
 
-# 2. Acceder a NIFI, para crear la estructura que permita extraer la información de la API facilitada. 
+### 2. Acceder a NIFI, para crear la estructura que permita extraer la información de la API facilitada. 
 	2.1 Añadir y configurar procesadores
 		InvokeHTTP: con la URL de la API https://data.cityofnewyork.us/resource/erm2-nwe9.json
 		SplitJson: Convertirá la información de la URL en JSON, lenguaje que necesitará Elastic para ser interpretado
 		PutElasticSearchHTTP: Llevará la información a ElasticSearch
 	2.2 Comprobar que no hay errores
 
-# 3. Acceder a Kibana, para crear el esquema que permita el acceso de la información del JSON y transformarla para que pueda ser visualizada en un mapa. Para ello, hay que reindexar los puntos de localización y transformarlos en GEO_POINT. 
+### 3. Acceder a Kibana, para crear el esquema que permita el acceso de la información del JSON y transformarla para que pueda ser visualizada en un mapa. Para ello, hay que reindexar los puntos de localización y transformarlos en GEO_POINT. 
 	3.1 DEV TOOLS, para crear el esquema y configurar el campo de localizacion de STRING en GEO_POINT. -PLAY- Generará los ficheros o índices en 
 	3.2 MANAMENT 
 		3.2.1 INDEX MANAGEMENTS. Comprobar que los ficheros se han generado. Revisar que el campo 'location' está en formato GEO_POINT
