@@ -1,6 +1,8 @@
-https://camo.githubusercontent.com/c1cbb3c3830389f0d553832d40c13651eaf3a9a9b92ccf60ce69553ddbdee50c/68747470733a2f2f6e336d357a3774342e726f636b657463646e2e6d652f77702d636f6e74656e742f706c7567696e732f6564656d2d73686f7274636f6465732f7075626c69632f696d672f6c6f676f2d4564656d2e706e67
+![enter image description here](https://n3m5z7t4.rocketcdn.me/wp-content/plugins/edem-shortcodes/public/img/logo-Edem.png)
 
-# Ejercicio nifi_elk kibana 311
+
+
+# Ejercicio Nifi  ELK 
 
 Usando nifi+ELK hay que presentar una solución que muestre sobre un mapa la disposición de delitos presentes en esta api:
 
@@ -14,17 +16,30 @@ https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-
 ## NIFI
 http://localhost:8080/nifi/?processGroupId=root&componentIds=e6258f27-0176-1000-857a-fcd85cd1a73a
 
+
 ## KIBANA
 http://localhost:5601/app/kibana#/dev_tools/console?_g=()
 
 
 
-### Entregables:
-	Enlace a código Github
-	Captura de pantalla de vuestra interfaz Kibana
+# 1. Levantar contenedores en DOCKER que permitan acceder a las distintas aplicaciones. Agrego al docker de Roberto, los contenedores de NIFI de la clase de Esteban. 
 
+# 2. Acceder a NIFI, para crear la estructura que permita extraer la información de la API facilitada. 
+	2.1 Añadir y configurar procesadores
+		InvokeHTTP: con la URL de la API https://data.cityofnewyork.us/resource/erm2-nwe9.json
+		SplitJson: Convertirá la información de la URL en JSON, lenguaje que necesitará Elastic para ser interpretado
+		PutElasticSearchHTTP: Llevará la información a ElasticSearch
+	2.2 Comprobar que no hay errores
 
+# 3. Acceder a Kibana, para crear el esquema que permita el acceso de la información del JSON y transformarla para que pueda ser visualizada en un mapa. Para ello, hay que reindexar los puntos de localización y transformarlos en GEO_POINT. 
+	3.1 DEV TOOLS, para crear el esquema y configurar el campo de localizacion de STRING en GEO_POINT. -PLAY- Generará los ficheros o índices en 
+	3.2 MANAMENT 
+		3.2.1 INDEX MANAGEMENTS. Comprobar que los ficheros se han generado. Revisar que el campo 'location' está en formato GEO_POINT
+		3.2.2 INDEX PATTERN. Generar patrón con el nuevo fichero recodificado: 'new_crime'
+	3.3 MAPS Add Layer con el patrón generado y visualizar. :)
+	3.4 DASHBOARD. Generar pizarra, con el tipo mapa de coordenadas y con resumen del fichero con los campos más relevantes o que requieran ser comentados. 
 
+	
 
 
 ----------------------------------------------------------------------------------------------------------
