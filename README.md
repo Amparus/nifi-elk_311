@@ -37,8 +37,7 @@ http://localhost:5601/app/kibana#/dev_tools/console?_g=()
 		3.2.1 INDEX MANAGEMENTS. Comprobar que los ficheros se han generado. Revisar que el campo 'location' está en formato GEO_POINT
 		3.2.2 INDEX PATTERN. Generar patrón con el nuevo fichero recodificado: 'new_crime'
 	3.3 MAPS Add Layer con el patrón generado y visualizar. :)
-	3.4 DASHBOARD. Generar pizarra, con el tipo mapa de coordenadas y con resumen del fichero con los campos más relevantes o que requieran ser comentados. 
-
+	3.4 DASHBOARD. Generar pizarra, con el tipo mapa de coordenadas, escoger las geo coordenadas en los Buckets
 	
 
 
